@@ -32,7 +32,7 @@
     
     /*search1*/
         let search1 = document.querySelector('#search1');
-        const storedSearch1 = localStorage.getItem('search1')
+        const storedSearch1 = localStorage.getItem('search')
 
     /* search2*/
 
@@ -127,6 +127,7 @@
                 break;
             }
         });
+
     /*message section called in local storage section*/
 
     let emptyString = () => {
@@ -138,17 +139,14 @@
             sendButton.style.color="black"
             search2.value="";
             messageText.value="";
-        }else{
-            
+        }else{ 
             alert("User isn’t selected or message field is empty !!! ");
-        
         }
 
     }
-  
-
 
     /*toggle btns section*/
+
         function btns (i,h,o){
             i.classList.toggle("translate");
             
@@ -160,6 +158,7 @@
             
             if(h.textContent==="ON"){
                 btnStyle("OFF","gray","lightGray")
+                
             }else{
                 btnStyle("ON","white","rgb(43, 101, 184,1)")
             }
@@ -178,7 +177,7 @@
 
         /*functions*/
             const saveToLocalSearchFunct = () => {
-                localStorage.setItem('search1',search1.value);
+                localStorage.setItem('search',search1.value);
 
             }
             const saveToLocalStorage = () => {
@@ -217,5 +216,9 @@
                     values[i].value=stored[i];
                 }
             }
+
+        /*position of the button */
+
+        inside.toogleclass(localStorage.toogled);
 
         
