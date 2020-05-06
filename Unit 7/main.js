@@ -127,7 +127,7 @@
                 break;
             }
         });
-    /*message section*/
+    /*message section called in local storage section*/
 
     let emptyString = () => {
 
@@ -145,7 +145,7 @@
         }
 
     }
-    sendButton.addEventListener('click',emptyString);
+  
 
 
     /*toggle btns section*/
@@ -184,7 +184,7 @@
             const saveToLocalStorage = () => {
                 localStorage.setItem('search2',search2.value);
                 localStorage.setItem('textinput',messageText.value);
-                
+                emptyString();
             }
 
             const saveToLocalStorageSelect=()=>{
